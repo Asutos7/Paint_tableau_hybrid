@@ -6,7 +6,7 @@ import au.com.bytecode.opencsv.CSVReader;
 public class MyCSVReader
 {
 
-    public CSVReader reader = new CSVReader(new FileReader("\\Users\\Asutos\\IdeaProjects\\Paint\\src\\texte\\test.csv"));
+    public CSVReader reader = new CSVReader(new FileReader("src\\texte\\test.csv"));
     public String [] nextLine;
     public ArrayList<Integer> list = new ArrayList<>();
 
