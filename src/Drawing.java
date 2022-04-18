@@ -194,6 +194,7 @@ public class Drawing extends JPanel implements MouseListener, MouseMotionListene
         JOptionPane info = new JOptionPane();
         info.showInternalMessageDialog( info, "Please save only in the Project Directory",
                 "Warning",JOptionPane.INFORMATION_MESSAGE);
+        // Pops up an "Open File" file chooser dialog
         int rVal = fileChooser.showOpenDialog(this);
         if (rVal == JFileChooser.APPROVE_OPTION) {
             // Creates a file output stream to write to the file represented by the specified File object
@@ -242,6 +243,7 @@ public class Drawing extends JPanel implements MouseListener, MouseMotionListene
         int rVal = fileChooser.showOpenDialog(this);
         if (rVal == JFileChooser.APPROVE_OPTION) {
             try {
+                // A FileInputStream obtains input bytes from a file in a file system
                 FileInputStream fis = new FileInputStream(fileChooser.getSelectedFile().getName());
                 // An ObjectInputStream deserializes primitive data and objects previously written using an ObjectOutputStream
                 ObjectInputStream ois = new ObjectInputStream(fis);
